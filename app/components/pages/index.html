@@ -3,21 +3,51 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Energostroy</title>
+	<title>Alps</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.bundle.css">
 
 </head>
 
 <body>
 
 	@import "header.html"
+	@import "mobile-header.html"
+	@import "menu.html"
+	@import "title.html"
+	<section class="countries section">
+		<div class="my-container my-container_bg">
+			<div class="contact-flex">
+				<div class="contact-left contact-block">
+					<h4 class="about-title">Страны</h4>
+					<p class="countries-text text">Международная консалтинговая Компания АЛПС энд ЧЕЙС имеет большой опыт сопровождения проектов в разных странах СНГ И Балтии. В зависимости от страны, мы предоставляем различные услуги и способствуем продвижению бизнеса Клиента в зависимости от задач, которые перед ним стоят.</p>
+					<p class="countries-text text"></p>
+					<div class="countries-list"></div>
+				</div>
+				<div class="contact-right contact-block">
+					<form class="contact-form">
+						<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
+						<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
+						<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
+						<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
+						<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
+						<label class="contact-form-label">
+							<input type="checkbox" required class="contact-form-check">
+							Даю свое согласие на обработку персональных данных.
+						</label>
+						<p class="contact-form-description">*Все поля обязательны для заполнения</p>
+						<button type="submit" class="contact-form-btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 	@import "footer.html"
-
 	<script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
