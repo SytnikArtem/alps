@@ -118,7 +118,10 @@ img
 			.menu-droplist
 				opacity: 1
 				pointer-events: auto
+			.far
+				color: #bbbbbc
 		.far
+			transition: color .5s ease
 			color: #ffffff
 			margin-left: 5px
 		&-link
@@ -126,9 +129,11 @@ img
 			text-transform: uppercase
 			color: #ffffff
 			white-space: nowrap
+			transition: color .5s ease
 			&:hover
 				text-decoration: none
-				color: #ffffff
+				color: #bbbbbc
+
 .main-title
 	min-height: 260px
 	position: relative
@@ -161,16 +166,19 @@ img
 		padding-right: 10px
 		margin-right: 10px
 		border-right: 1px solid #ffffff
+		text-decoration: underline
 		&:last-child
 			border: none
+			text-decoration: none
 	&-link
 		color: #ffffff
 		font-size: 16px
 		font-weight: 400
 		line-height: 1
 		letter-spacing: 0.37px
+		transition: color .5s ease
 		&:hover
-			color: #ffffff
+			color: #bbbbbc
 			text-decoration: none
 .section
 	padding: 50px 0 60px
@@ -178,10 +186,13 @@ img
 		background: rgba(241, 242, 246, 0.7)
 .text
 	color: #222222
-	font-family: "Arial Narrow"
 	font-size: 20px
 	letter-spacing: 0.5px
-	line-height: 1.25
+	line-height: 1.5
+	&_bold
+		font-weight: bold
+	&_italic
+		font-style: italic
 .subtitle
 	color: #222222
 	font-size: 24px
@@ -204,6 +215,8 @@ img
 		text-transform: uppercase
 		letter-spacing: 0.9px
 		margin-bottom: 35px
+		&_sm
+			margin-bottom: 20px
 	&-text
 		text-align: justify
 		margin-bottom: 20px
@@ -221,15 +234,20 @@ img
 		display: inline-block
 		margin-top: 20px
 		padding-left: 25px
+		&_company
+			max-width: 100%
+			margin-bottom: 20px
 		&:hover
 			text-decoration: none
 			color: #ffffff
+			background-color: darken(#3fc0ea, 10%)
 	&-years
 		width: 312px
 		height: 312px
 		background: #f1f2f6
 		border-radius: 50%
 		text-align: center
+		padding-top: 15px
 		&-number
 			color: #01867c
 			letter-spacing: -13px
@@ -261,7 +279,6 @@ img
 		margin: 45px 0 75px -20px
 		&-item
 			color: #000000
-			font-family: "Arial Narrow"
 			font-size: 18px
 			line-height: 1
 			margin: 0 20px
@@ -321,10 +338,12 @@ img
 		justify-content: space-between
 	&-all
 		color: #222222
-		font-family: "Arial Narrow"
 		font-size: 18px
 		text-decoration: underline
 		letter-spacing: 0.45px
+		&:hover
+			text-decoration: none
+			color: #222222
 	&-list
 		display: flex
 		align-items: flex-start
@@ -336,7 +355,6 @@ img
 			margin-right: 0
 	&-title
 		color: #222222
-		font-family: "Arial Narrow"
 		font-size: 18px
 		letter-spacing: 0.45px
 		text-transform: uppercase
@@ -346,7 +364,6 @@ img
 	&-text
 		margin: 0
 		color: #222222
-		font-family: "Arial Narrow"
 		font-size: 18px
 		letter-spacing: 0.45px
 		line-height: 1.3
@@ -389,6 +406,10 @@ img
 		color: #bbbbbc
 		font-size: 18px
 		text-transform: uppercase
+		transition: color .5s ease
+		&:hover
+			color: #ffffff
+			text-decoration: none
 	&-text
 		color: #bbbbbc
 		font-size: 18px
@@ -406,6 +427,9 @@ img
 		&-link
 			line-height: 1.5
 			text-decoration: underline
+			transition: color .5s ease
+			&:hover
+				color: #ffffff
 .social
 	&-list
 		margin: 40px 0 0
@@ -416,8 +440,9 @@ img
 		font-size: 28px
 		color: #bbbbbc
 		margin-right: 20px
+		transition: color .5s ease
 		&:hover
-			color: #bbbbbc
+			color: #ffffff
 .contact
 	&-flex
 		display: flex
@@ -428,6 +453,8 @@ img
 	&-block
 		border: 1px solid rgba(132, 130, 127, 0.5)
 		padding: 20px 40px
+		&_marg
+			margin-top: 20px
 	&-right
 		width: 418px
 	&-list
@@ -448,7 +475,6 @@ img
 		margin-bottom: 20px
 		&-text
 			color: #222222
-			font-family: "Arial Narrow"
 			font-size: 18px
 			text-transform: uppercase
 			letter-spacing: 0.45px
@@ -469,7 +495,6 @@ img
 		z-index: 2
 		&-text
 			color: #222222
-			font-family: "Arial Narrow"
 			font-size: 18px
 			letter-spacing: 0.45px
 			margin-bottom: 10px
@@ -488,29 +513,26 @@ img
 			text-transform: uppercase
 			letter-spacing: 0.55px
 			text-align: center
+			margin-bottom: 20px
 		&-textarea
 			width: 100%
 			height: 140px
 			padding: 15px 20px
 			border: 1px solid rgba(53, 76, 88, 0.29)
-			font-family: "Arial Narrow"
 			font-size: 18px
 			outline: none
 			resize: none
-			margin-top: 20px
 		&-input
 			border: 1px solid rgba(53, 76, 88, 0.29)
 			width: 100%
-			margin-top: 20px
+			margin-bottom: 20px
 			height: 50px
 			line-height: 50px
-			font-family: "Arial Narrow"
 			font-size: 18px
 			padding: 0 20px
 			outline: none
 		&-label
 			color: #222222
-			font-family: "Arial Narrow"
 			font-size: 18px
 			font-weight: 400
 			letter-spacing: 0.45px
@@ -529,7 +551,6 @@ img
 			outline: none
 		&-description
 			color: rgba(72, 68, 62, 0.75)
-			font-family: "Arial Narrow"
 			font-size: 18px
 			margin: 0 0 0 20px
 		&-btn
@@ -545,8 +566,231 @@ img
 			outline: none
 			border: none
 			cursor: pointer
-			margin: 40px 0 20px
+			margin: 25px 0 20px
+			transition:  background-color .5s ease
+			&:hover
+				background: darken(#3fc0ea, 10%)
 .countries
+	&-list
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-wrap: wrap
+		margin-top: 30px
+	&-item
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		width: calc(33% - 12px)
+		background: #f4f4f4
+		height: 50px
+		line-height: 50px
+		padding: 11px 20px
+		margin-bottom: 20px
+		&:nth-child(3n+2)
+			margin: 0 21px
+.expert
+	&-flex
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+		margin-top: 25px
+	&-item
+		width: calc(50% - 10px)
+		position: relative
+		cursor: pointer
+		&:before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background: rgba(255, 255, 255, 0.5)
+			transition: background-color .5s ease
+		&:hover:before
+			background: transparent
 	&-text
-		
+		color: #ffffff
+		font-size: 18px
+		letter-spacing: 0.45px
+		background: rgba(0, 117, 105, 0.7)
+		padding: 15px 55px 15px 20px
+		line-height: 1.1
+		position: absolute
+		left: 0
+		bottom: 0
+		margin: 0
+		z-index: 2
+		.far
+			font-size: 28px
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%)
+	&-link
+		color: #48443e
+		font-size: 18px
+		text-decoration: underline
+		margin: 25px 0 15px
+		display: inline-block
+		&:hover
+			color: #48443e
+			text-decoration: none
+.company
+	&-block
+		margin-top: 20px
+	&-item
+		color: #222222
+		font-size: 18px
+		letter-spacing: 0.45px
+		padding: 10px 0 10px 55px
+		background: url(../img/ok.png) no-repeat left center
+		background-size: 35px
+	&-list
+		margin-bottom: 5px
+.video-popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	background: rgba(0, 0, 0, 0.5)
+	z-index: 600
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	opacity: 0
+	pointer-events: none
+	transition: opacity .5s ease
+	&.active
+		opacity: 1
+		pointer-events: auto
+	&-container
+		width: 850px
+		height: 600px
+		margin-top: 100px
+		iframe
+			width: 100%
+			height: 100%
+.article
+	&-title
+		color: #3ab6de
+		font-size: 24px
+		text-transform: uppercase
+		letter-spacing: 0.6px
+		max-width: 465px
+		margin-top: 15px
+	&-list
+		border-top: 1px solid #3fc0ea
+		margin-top: 30px
+		padding-top: 25px
+	&-item
+		margin-bottom: 10px
+		&-link
+			text-decoration: underline
+			text-decoration-style: dotted
+			text-decoration-color: #3fc0ea
+			&:hover
+				text-decoration: none
+				color: #222222
+	&-sublist
+		margin: 0
+	&-subitem
+		border-top: 1px solid #3fc0ea
+		margin-top: 30px
+		padding-top: 25px
+		.text_bold
+			margin-bottom: 10px
+			display: inline-block
+		&-img
+			float: right
+			margin: 10px 0 10px 10px
+	&-text
+		margin-bottom: 10px
+	&-table
+		margin-top: 20px
+		&-row
+			display: flex
+			border: 1px solid rgba(53, 76, 88, 0.29)
+			border-bottom: none
+			&:last-child
+				border-bottom: 1px solid rgba(53, 76, 88, 0.29)
+		&-left
+			width: 155px
+			flex-shrink: 0
+			margin: 0
+			color: #48443e
+			font-size: 18px
+			letter-spacing: 0.45px
+			padding: 12px 20px
+			border-right: 1px solid rgba(53, 76, 88, 0.29)
+		&-right
+			width: 100%
+			margin: 0
+			color: #48443e
+			font-size: 18px
+			letter-spacing: 0.45px
+			padding: 12px 20px
+
+	&-counter
+		&-list
+			counter-reset: article-counter-item
+		&-item
+			padding-left: 20px
+			position: relative
+			margin-bottom: 10px
+			&:before
+				counter-increment: article-counter-item
+				content: counter(article-counter-item) "."
+				position: absolute
+				left: 0
+				top: 0
+.publication
+	&-list
+		display: flex
+		align-items: center
+		justify-content: flex-start
+	&-item
+		margin-right: 27px
+		position: relative
+		&-link
+			color: #3fc0ea
+			font-size: 18px
+			text-transform: uppercase
+			letter-spacing: 0.45px
+			&.active
+				color: #0056b3
+				text-decoration: underline
+		&-number
+			font-size: 14px
+			position: absolute
+			top: -5px
+			right: -35px
+			width: 30px
+	&-date
+		font-size: 18px
+		color: rgba(34, 34, 34, 0.7)
+		letter-spacing: 0.45px
+		margin-bottom: 10px
+	&-title
+		font-size: 18px
+		line-height: 1.25
+	&-text
+		font-size: 18px
+		line-height: 1.25
+	&-block
+		padding: 20px 0 20px
+		margin-bottom: 15px
+		border-bottom: 1px solid rgba(132, 130, 127, 0.5)
+		display: inline-block
+	&-link
+		&:hover
+			text-decoration: none
+	&-more
+		text-transform: uppercase
+.item
+	&-title
+		color: #3fc0ea
 @import "media" // Всегда в конце
