@@ -40,14 +40,46 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: false,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1160,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     $('.client-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: false,
         infinite: false,
-        adaptiveHeight: false
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 1160,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     $('.contact-item').click(function(){
         $(this).siblings().find('.contact-drop').slideUp();
@@ -66,11 +98,23 @@ $(document).ready(function() {
 
     function bodyUnfreezeScroll() {
         var bodyWidth = $body.innerWidth();
-        $body.css('marginRight', '-=' + (bodyWidth - $body.innerWidth()))
+        $body.css('marginRight', '0')
         $body.css('overflow', 'auto');
     }
     $('.expert-item').click(function () {
         $('.video-popup').addClass('active');
+        bodyFreezeScroll();
+    });
+    $('.registration_btn_open').click(function () {
+        $('.registration-popup').addClass('active');
+        bodyFreezeScroll();
+    });
+    $('.contact-form-btn_reg').click(function () {
+        $('.registration-popup').removeClass('active');
+        bodyUnfreezeScroll();
+    });
+    $('.open-form-btn').click(function () {
+        $('.mail-popup').addClass('active');
         bodyFreezeScroll();
     });
     $(document).mouseup(function (e) {
@@ -81,6 +125,16 @@ $(document).ready(function() {
         var container2 = $(".video-popup-container");
         if (container2.has(e.target).length === 0){
             $('.video-popup').removeClass('active');
+            bodyUnfreezeScroll();
+        }
+        var container3 = $(".registration-popup-container");
+        if (container3.has(e.target).length === 0){
+            $('.registration-popup').removeClass('active');
+            bodyUnfreezeScroll();
+        }
+        var container4 = $(".mail-popup-container");
+        if (container4.has(e.target).length === 0){
+            $('.mail-popup').removeClass('active');
             bodyUnfreezeScroll();
         }
     });
@@ -95,6 +149,51 @@ $(document).ready(function() {
         e.preventDefault();
         $(this).addClass('active');
         $(this).parent().siblings().find('.publication-item-link').removeClass('active');
+    });
+    var items = $('.change-height').find('.item-item').slice(0,2);
+    var items2 = $('.change-height2').find('.item-item').slice(0,3);
+    var i,
+        j,
+        height2 = 0,
+        height = 0;
+
+    for (i = 0; i < items.length; i++) {
+        height += items.eq(i).height();
+    }
+    $('.change-height').height(height);
+    for (j = 0; j < items2.length; j++) {
+        height2 += items2.eq(j).height();
+    }
+    $('.change-height2').height(height2);
+
+    function changeHeight(param, item) {
+        item.parent().find('.change-height').height('auto');
+        item.parent().find('.change-height').toggleClass('active');
+        var thisText = item.parent().find('.item-more-text').attr('data-text');
+        if(!item.parent().find('.change-height').hasClass('active')) {
+            item.parent().find('.change-height').height(param);
+            item.parent().find('.change-height').removeClass('active');
+            item.parent().find('.item-more-text').text(thisText);
+        }
+        else {
+            item.parent().find('.item-more-text').text('Свернуть')
+        }
+    }
+
+    $('.item-more').click(function(e){
+        e.preventDefault();
+        changeHeight(height, $(this));
+    });
+    $('.item-other-more').click(function(e){
+        e.preventDefault();
+        console.log('aa')
+        changeHeight(height2, $(this));
+    });
+    $('.question-btn').click(function () {
+        $(this).parent().siblings().find('.question-btn').removeClass('active');
+        $(this).toggleClass('active');
+        $(this).parent().siblings().find('.question-slide').slideUp()
+        $(this).parent().find('.question-slide').slideToggle();
     })
 });
 $(window).scroll(function () {

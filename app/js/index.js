@@ -23,44 +23,44 @@ $(document).ready(function() {
             }
         });
 
+        // setTimeout(function () {
+        //     $({deg: 0}).animate({deg: 90}, {
+        //         duration: 300,
+        //         step: function (now) {
+        //
+        //             $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
+        //         }
+        //     })
+        // }, 700);
+
+        // setTimeout(function () {
+        //     $({deg: 90}).animate({deg: 180}, {
+        //         duration: 300,
+        //         step: function (now) {
+        //
+        //             $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
+        //         }
+        //     })
+        // }, 1500);
+
+        // setTimeout(function () {
+        //     $({deg: 180}).animate({deg: 270}, {
+        //         duration: 300,
+        //         step: function (now) {
+        //
+        //             $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
+        //         }
+        //     })
+        // }, 2200);
+
+        // setTimeout(function () {
+        //
+        //     $(".cube_rotator").animate({'right': '0', 'marginRight': '-17px'}, 700);
+        //     $(".main_slider, .header_block, footer").animate({"opacity": 1}, 700);
+        // }, 3000);
+        //
         setTimeout(function () {
-            $({deg: 0}).animate({deg: 90}, {
-                duration: 300,
-                step: function (now) {
-
-                    $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
-                }
-            })
-        }, 700);
-
-        setTimeout(function () {
-            $({deg: 90}).animate({deg: 180}, {
-                duration: 300,
-                step: function (now) {
-
-                    $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
-                }
-            })
-        }, 1500);
-
-        setTimeout(function () {
-            $({deg: 180}).animate({deg: 270}, {
-                duration: 300,
-                step: function (now) {
-
-                    $(".cube_main").css({transform: "rotateX(" + now + "deg)"});
-                }
-            })
-        }, 2200);
-
-        setTimeout(function () {
-
-            $(".cube_rotator").animate({'right': '0', 'marginRight': '-17px'}, 700);
-            $(".main_slider, .header_block, footer").animate({"opacity": 1}, 700);
-        }, 3000);
-
-        setTimeout(function () {
-            $(".cube_rotator").addClass("final");
+            // $(".cube_rotator").addClass("final");
 
             $(".cube_rotator").hover(
                 function () {
@@ -132,7 +132,7 @@ $(document).ready(function() {
                     });
                 }
             });
-        }, 3900);
+        }, 100);
 
         setTimeout(function () {
             var angle = gallery.currentAngle;

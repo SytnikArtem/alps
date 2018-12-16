@@ -5800,7 +5800,7 @@ header.main_header .lang__list {
 
 .cabinet:hover a,
 .header_contacts__current:hover a,
-.lang:hover a {
+.lang a:hover {
     color: #009287;
     text-decoration: none
 }
@@ -5863,8 +5863,8 @@ header.main_header .lang__list {
 .main_slider {
     display: block;
     z-index: 1;
-    overflow: hidden;
-    opacity: 0
+    /*overflow: hidden;*/
+    /*opacity: 0*/
 }
 
 .main_slider,
@@ -5984,9 +5984,9 @@ header.main_header .lang__list {
 
 .cube_rotator {
     position: absolute;
-    right: 50%;
+    right: 0;
     top: 50%;
-    margin-right: -118px;
+    margin-right: -17px;
     margin-top: -50px;
     -webkit-perspective: 3360px;
     perspective: 3360px;
@@ -6149,14 +6149,14 @@ header.main_header .lang__list {
     background-size: cover;
     width: 13px;
     height: 13px;
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: rotate(-45deg) translateZ(51px);
     transform: rotate(-45deg) translateZ(51px)
 }
 
 .cube_rotator_arrow_down,
 .cube_rotator_arrow_up {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     left: 0;
     color: #fff;
