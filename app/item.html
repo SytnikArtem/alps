@@ -18,60 +18,93 @@
 
 	<!-- header.html -->
 <header class="main_header">
-	<div class="main_menu header_block" style="opacity: 1;">
-		<a href="#"><i class="main_menu__icon">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</i>
-			Меню</a>
-	</div>
+	<div class="main-header-left">
+		<div class="main_menu header_block" style="opacity: 1;">
+			<a href="#"><i class="main_menu__icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</i>
+				Меню</a>
+		</div>
 
-	<div class="header_contacts header_block" style="opacity: 1;">
+		<div class="header_contacts header_block" style="opacity: 1;">
 
-		<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
+			<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
 
-		<div class="header_contacts__dropdown dropdown_menu hidden">
-			<a href="#">Москва +7 (499) 921-02-22</a>
-			<a href="#">Астана +7 (7172) 727 783</a>
+			<div class="header_contacts__dropdown dropdown_menu hidden">
+				<a href="#">Москва +7 (499) 921-02-22</a>
+				<a href="#">Астана +7 (7172) 727 783</a>
+			</div>
+		</div>
+		<div class="side_menu">
+			<nav>
+				<a href="">О компании </a>
+				<a href="">Услуги</a>
+				<a href="">Страны</a>
+				<a href="">Публикации</a>
+				<a href="">Мероприятия</a>
+				<a href="">Контакты</a>
+			</nav>
+			<div class="slide-social">
+				<a href="" class="slide-social-mail">info@alpschase.com</a>
+				<div class="slide-icons">
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="side_menu">
-		<nav>
-			<a href="">О компании </a>
-			<a href="">Услуги</a>
-			<a href="">Страны</a>
-			<a href="">Публикации</a>
-			<a href="">Мероприятия</a>
-			<a href="">Контакты</a>
-		</nav>
-	</div>
+
 	<div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
-	<div class="cabinet header_block_right">
-		<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
-	</div>
-	<div class="lang header_block_right">
-		<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
-		<div class="lang__list dropdown_menu">
-			<a href=""><i></i><span>RU</span></a>
-			<a href=""><i></i><span>EN</span></a>
-			<a href=""><i></i><span>FR</span></a>
-			<a href=""><i></i><span>DE</span></a>
-			<a href=""><i></i><span>IT</span></a>
-			<a href=""><i></i><span>ES</span></a>
+	<div class="main-header-right">
+		<div class="cabinet header_block_right">
+			<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
+		</div>
+		<div class="lang header_block_right">
+			<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
+			<div class="lang__list dropdown_menu">
+				<a href=""><i></i><span>RU</span></a>
+				<a href=""><i></i><span>EN</span></a>
+				<a href=""><i></i><span>FR</span></a>
+				<a href=""><i></i><span>DE</span></a>
+				<a href=""><i></i><span>IT</span></a>
+				<a href=""><i></i><span>ES</span></a>
 
+			</div>
+		</div>
+		<div class="header_search header_block_right">
+			<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
+			<div class="header_search__input">
+				<form action="" method="get">
+					<input type="text" name="q" value="">
+					<button><i class="far fa-search"></i></button>
+				</form>
+			</div>
 		</div>
 	</div>
-	<div class="header_search header_block_right">
-		<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
-		<div class="header_search__input">
-			<form action="" method="get">
-				<input type="text" name="q" value="">
-				<button><i class="far fa-search"></i></button>
-			</form>
-		</div>
-	</div>
+
 </header>
 	<div class="mobile_header">
     <div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
@@ -241,74 +274,80 @@
 			<div class="contact-flex">
 				<div class="contact-left">
 					<div class="contact-block">
-						<h4 class="about-title item-title">Регистрация ТОО в Казахстане</h4>
-						<div class="item-container">
-							<div class="item-block">
-								<h6 class="item-subtitle">Основные законодательные акты:</h6>
-								<p class="item-text text">Гражданский кодекс (…), Закон он «…»</p>
+						<div class="contact-relative">
+							<div class="eye-block">
+								<div class="eye-text">0</div>
+								<img src="img/eye.svg" alt="" class="eye-img">
 							</div>
-							<div class="item-block">
-								<h6 class="item-subtitle">Наиболее популярные формы ведения бизнеса в Казахстане:</h6>
-								<ul class="item-list">
-									<li class="item-item">
-										<p class="item-item-text text text_bold">Товарищество с ограниченной ответственностью (ТОО)</p>
-										<p class="item-item-text text">В соответствии с законом “О частном предпринимательстве” различается несколько форм ТОО: субъект микро предпринимательства, субъект малого предпринимательства (СМП), субъект среднего предпринимательства (ССП), субъект крупного предпринимательства (СКП). Минимальный уставный капитал: СМП – 100 тенге (ок. 1 доллар США), ССП и СКП – 100 МРЗП (в 2017 году составляет 226 900 тенге – около 685 долларов США).</p>
-									</li>
-									<li class="item-item">
-										<p class="item-item-text text text_bold">Акционерное общество (АО)</p>
-										<p class="item-item-text text">В Казахстане нет деления на открытые и закрытые акционерные общества. Минимальный уставный капитал акционерного общества – 50 000 МРП (в 2017 году составляет 113 450 000 тенге – около 340 000 долларов США).</p>
-									</li>
-									<li class="item-item">
-										<p class="item-item-text text text_bold">Представительство/филиал</p>
-										<p class="item-item-text text">Для Представительств и Филиалов не существует законодательных ограничений по срокам аккредитации. Предлагаемая нами отдельная опция: регистрация Представительств/Филиалов для иностранных банков с получением соответствующих лицензий.</p>
-									</li>
-								</ul>
+							<h4 class="about-title item-title">Регистрация ТОО в Казахстане</h4>
+							<div class="item-container">
+								<div class="item-block">
+									<h6 class="item-subtitle">Основные законодательные акты:</h6>
+									<p class="item-text text">Гражданский кодекс (…), Закон он «…»</p>
+								</div>
+								<div class="item-block">
+									<h6 class="item-subtitle">Наиболее популярные формы ведения бизнеса в Казахстане:</h6>
+									<ul class="item-list">
+										<li class="item-item">
+											<p class="item-item-text text text_bold">Товарищество с ограниченной ответственностью (ТОО)</p>
+											<p class="item-item-text text">В соответствии с законом “О частном предпринимательстве” различается несколько форм ТОО: субъект микро предпринимательства, субъект малого предпринимательства (СМП), субъект среднего предпринимательства (ССП), субъект крупного предпринимательства (СКП). Минимальный уставный капитал: СМП – 100 тенге (ок. 1 доллар США), ССП и СКП – 100 МРЗП (в 2017 году составляет 226 900 тенге – около 685 долларов США).</p>
+										</li>
+										<li class="item-item">
+											<p class="item-item-text text text_bold">Акционерное общество (АО)</p>
+											<p class="item-item-text text">В Казахстане нет деления на открытые и закрытые акционерные общества. Минимальный уставный капитал акционерного общества – 50 000 МРП (в 2017 году составляет 113 450 000 тенге – около 340 000 долларов США).</p>
+										</li>
+										<li class="item-item">
+											<p class="item-item-text text text_bold">Представительство/филиал</p>
+											<p class="item-item-text text">Для Представительств и Филиалов не существует законодательных ограничений по срокам аккредитации. Предлагаемая нами отдельная опция: регистрация Представительств/Филиалов для иностранных банков с получением соответствующих лицензий.</p>
+										</li>
+									</ul>
+								</div>
+								<div class="item-block">
+									<h6 class="item-subtitle">Минимальный уставный капитал:</h6>
+									<ul class="item-list change-height">
+										<li class="item-item item-item_nomarg">
+											<p class="item-item-text text">Товарищество с ограниченной ответственностью (ТОО) – в зависимости от субъекта предпринимательства от 100 тенге (около 1 USD). ССП и СКП –  226 900 тенге (около 685 USD).</p>
+										</li>
+										<li class="item-item item-item_nomarg">
+											<p class="item-item-text text">Акционерное общество (АО) – 113 450 000 тенге – около 340 USD.</p>
+										</li>
+										<li class="item-item item-item_nomarg">
+											<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
+										</li>
+										<li class="item-item item-item_nomarg">
+											<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
+										</li>
+										<li class="item-item item-item_nomarg">
+											<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
+										</li>
+									</ul>
+									<a href="" class="item-more">
+										<span class="item-more-text" data-text="Читать далее">Читать далее</span><i class="far fa-angle-down"></i>
+									</a>
+								</div>
+								<div class="item-block">
+									<h5 class="item-other">Другие юридические услуги в Казахстане:</h5>
+									<ul class="item-list item-list_other change-height2 change-height">
+										<li class="item-item item-item_other">
+											<a href="" class="item-item-link">Получение ИИН</a>
+										</li>
+										<li class="item-item item-item_other">
+											<a href="" class="item-item-link">Получение БИН</a>
+										</li>
+										<li class="item-item item-item_other">
+											<a href="" class="item-item-link">Смена директора</a>
+										</li>
+										<li class="item-item item-item_other">
+											<a href="" class="item-item-link">Смена директора</a>
+										</li>
+									</ul>
+									<a href="" class="item-other-more">
+										<span class="item-more-text" data-text="Развернуть список">Развернуть список</span><i class="far fa-angle-down"></i>
+									</a>
+								</div>
 							</div>
-							<div class="item-block">
-								<h6 class="item-subtitle">Минимальный уставный капитал:</h6>
-								<ul class="item-list change-height">
-									<li class="item-item item-item_nomarg">
-										<p class="item-item-text text">Товарищество с ограниченной ответственностью (ТОО) – в зависимости от субъекта предпринимательства от 100 тенге (около 1 USD). ССП и СКП –  226 900 тенге (около 685 USD).</p>
-									</li>
-									<li class="item-item item-item_nomarg">
-										<p class="item-item-text text">Акционерное общество (АО) – 113 450 000 тенге – около 340 USD.</p>
-									</li>
-									<li class="item-item item-item_nomarg">
-										<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
-									</li>
-									<li class="item-item item-item_nomarg">
-										<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
-									</li>
-									<li class="item-item item-item_nomarg">
-										<p class="item-item-text text">Для Филиалов/Представительства уставный капитал не предусмотрен.</p>
-									</li>
-								</ul>
-								<a href="" class="item-more">
-									<span class="item-more-text" data-text="Читать далее">Читать далее</span><i class="far fa-angle-down"></i>
-								</a>
-							</div>
-							<div class="item-block">
-								<h5 class="item-other">Другие юридические услуги в Казахстане:</h5>
-								<ul class="item-list item-list_other change-height2 change-height">
-									<li class="item-item item-item_other">
-										<a href="" class="item-item-link">Получение ИИН</a>
-									</li>
-									<li class="item-item item-item_other">
-										<a href="" class="item-item-link">Получение БИН</a>
-									</li>
-									<li class="item-item item-item_other">
-										<a href="" class="item-item-link">Смена директора</a>
-									</li>
-									<li class="item-item item-item_other">
-										<a href="" class="item-item-link">Смена директора</a>
-									</li>
-								</ul>
-								<a href="" class="item-other-more">
-									<span class="item-more-text" data-text="Развернуть список">Развернуть список</span><i class="far fa-angle-down"></i>
-								</a>
-							</div>
+							<a href="" class="expert-link publication-more">больше публикаций</a>
 						</div>
-						<a href="" class="expert-link publication-more">больше публикаций</a>
 					</div>
 					<div class="contact-block contact-block_marg expert">
 						<h5 class="subtitle advantages-subtitle">Интервью экспертов</h5>
@@ -354,23 +393,25 @@
 								<li class="company-item">Отличное знание законодательства и практики</li>
 								<li class="company-item">Высокое качество услуг и автоматизации внутренних процессов</li>
 							</ul>
-							<a href="" download class="about-link about-link_company">Скачать брошюру</a>
+							<a href="img/requisites.pdf" download class="about-link about-link_company">Скачать брошюру</a>
 						</div>
 					</div>
-					<div class="contact-block contact-block_marg">
-						<form class="contact-form">
-							<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
-							<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
-							<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
-							<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
-							<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
-							<label class="contact-form-label">
-								<input type="checkbox" required class="contact-form-check">
-								Даю свое согласие на обработку персональных данных.
-							</label>
-							<p class="contact-form-description">*Все поля обязательны для заполнения</p>
-							<button type="submit" class="contact-form-btn">Отправить</button>
-						</form>
+					<div class="contact-form-trigger">
+						<div class="contact-block contact-block_marg contact-form-fixed">
+							<form class="contact-form">
+								<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
+								<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
+								<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
+								<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
+								<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
+								<label class="contact-form-label">
+									<input type="checkbox" required class="contact-form-check">
+									Даю свое согласие на обработку персональных данных.
+								</label>
+								<p class="contact-form-description">*Все поля обязательны для заполнения</p>
+								<button type="submit" class="contact-form-btn">Отправить</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -396,6 +437,9 @@
 				<p class="contact-form-description">*Все поля обязательны для заполнения</p>
 				<button type="submit" class="contact-form-btn">Отправить</button>
 			</form>
+			<div class="mail-popup-close">
+				<img src="img/close.svg" alt="" class="mail-popup-img">
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
@@ -467,7 +511,7 @@
         </div>
     </div>
 </footer>
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 

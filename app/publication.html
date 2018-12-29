@@ -18,60 +18,93 @@
 
 	<!-- header.html -->
 <header class="main_header">
-	<div class="main_menu header_block" style="opacity: 1;">
-		<a href="#"><i class="main_menu__icon">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</i>
-			Меню</a>
-	</div>
+	<div class="main-header-left">
+		<div class="main_menu header_block" style="opacity: 1;">
+			<a href="#"><i class="main_menu__icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</i>
+				Меню</a>
+		</div>
 
-	<div class="header_contacts header_block" style="opacity: 1;">
+		<div class="header_contacts header_block" style="opacity: 1;">
 
-		<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
+			<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
 
-		<div class="header_contacts__dropdown dropdown_menu hidden">
-			<a href="#">Москва +7 (499) 921-02-22</a>
-			<a href="#">Астана +7 (7172) 727 783</a>
+			<div class="header_contacts__dropdown dropdown_menu hidden">
+				<a href="#">Москва +7 (499) 921-02-22</a>
+				<a href="#">Астана +7 (7172) 727 783</a>
+			</div>
+		</div>
+		<div class="side_menu">
+			<nav>
+				<a href="">О компании </a>
+				<a href="">Услуги</a>
+				<a href="">Страны</a>
+				<a href="">Публикации</a>
+				<a href="">Мероприятия</a>
+				<a href="">Контакты</a>
+			</nav>
+			<div class="slide-social">
+				<a href="" class="slide-social-mail">info@alpschase.com</a>
+				<div class="slide-icons">
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="side_menu">
-		<nav>
-			<a href="">О компании </a>
-			<a href="">Услуги</a>
-			<a href="">Страны</a>
-			<a href="">Публикации</a>
-			<a href="">Мероприятия</a>
-			<a href="">Контакты</a>
-		</nav>
-	</div>
+
 	<div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
-	<div class="cabinet header_block_right">
-		<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
-	</div>
-	<div class="lang header_block_right">
-		<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
-		<div class="lang__list dropdown_menu">
-			<a href=""><i></i><span>RU</span></a>
-			<a href=""><i></i><span>EN</span></a>
-			<a href=""><i></i><span>FR</span></a>
-			<a href=""><i></i><span>DE</span></a>
-			<a href=""><i></i><span>IT</span></a>
-			<a href=""><i></i><span>ES</span></a>
+	<div class="main-header-right">
+		<div class="cabinet header_block_right">
+			<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
+		</div>
+		<div class="lang header_block_right">
+			<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
+			<div class="lang__list dropdown_menu">
+				<a href=""><i></i><span>RU</span></a>
+				<a href=""><i></i><span>EN</span></a>
+				<a href=""><i></i><span>FR</span></a>
+				<a href=""><i></i><span>DE</span></a>
+				<a href=""><i></i><span>IT</span></a>
+				<a href=""><i></i><span>ES</span></a>
 
+			</div>
+		</div>
+		<div class="header_search header_block_right">
+			<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
+			<div class="header_search__input">
+				<form action="" method="get">
+					<input type="text" name="q" value="">
+					<button><i class="far fa-search"></i></button>
+				</form>
+			</div>
 		</div>
 	</div>
-	<div class="header_search header_block_right">
-		<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
-		<div class="header_search__input">
-			<form action="" method="get">
-				<input type="text" name="q" value="">
-				<button><i class="far fa-search"></i></button>
-			</form>
-		</div>
-	</div>
+
 </header>
 	<div class="mobile_header">
     <div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
@@ -241,67 +274,89 @@
 			<div class="contact-flex">
 				<div class="contact-left">
 					<div class="contact-block">
-						<h4 class="about-title">Публикации</h4>
-						<ul class="publication-list">
-							<li class="publication-item">
-								<a href="" class="publication-item-link active">Все</a>
-								<span class="publication-item-number">53</span>
-							</li>
-							<li class="publication-item">
-								<a href="" class="publication-item-link">Лицензированные</a>
-								<span class="publication-item-number">5</span>
-							</li>
-							<li class="publication-item">
-								<a href="" class="publication-item-link">Недвижимость</a>
-								<span class="publication-item-number">7</span>
-							</li>
-							<li class="publication-item">
-								<a href="" class="publication-item-link">Регистрация</a>
-								<span class="publication-item-number">10</span>
-							</li>
-							<li class="publication-item">
-								<a href="" class="publication-item-link">Видео</a>
-								<span class="publication-item-number">7</span>
-							</li>
-						</ul>
-						<div class="publication-container">
-							<div class="publication-block">
-								<a href="" class="publication-link">
-									<p class="publication-date">23.08.2018</p>
-									<h6 class="publication-title text text_bold">В Беларуси Президентом подписан Декрет, который предоставит широкие возможности для использования технологии блокчейн, майнинга, криптовалют и различные льготы для IT компаний</h6>
-									<p class="publication-text text">В Беларуси Президентом подписан Декрет, который предоставит широкие возможности для использования технологии блокчейн и различные льготы для IT компаний (Декрет о ПВТ 2.0)</p>
-								</a>
+						<div class="contact-relative">
+							<h4 class="about-title">Публикации</h4>
+							<ul class="publication-list">
+								<li class="publication-item">
+									<a href="" class="publication-item-link active">Все</a>
+									<span class="publication-item-number">53</span>
+								</li>
+								<li class="publication-item">
+									<a href="" class="publication-item-link">Лицензированные</a>
+									<span class="publication-item-number">5</span>
+								</li>
+								<li class="publication-item">
+									<a href="" class="publication-item-link">Недвижимость</a>
+									<span class="publication-item-number">7</span>
+								</li>
+								<li class="publication-item">
+									<a href="" class="publication-item-link">Регистрация</a>
+									<span class="publication-item-number">10</span>
+								</li>
+								<li class="publication-item">
+									<a href="" class="publication-item-link">Видео</a>
+									<span class="publication-item-number">7</span>
+								</li>
+							</ul>
+							<div class="publication-container">
+								<div class="publication-block">
+									<a href="" class="publication-link">
+										<div class="eye-block">
+											<div class="eye-text">0</div>
+											<img src="img/eye.svg" alt="" class="eye-img">
+										</div>
+										<p class="publication-date">23.08.2018</p>
+										<h6 class="publication-title text text_bold">В Беларуси Президентом подписан Декрет, который предоставит широкие возможности для использования технологии блокчейн, майнинга, криптовалют и различные льготы для IT компаний</h6>
+										<p class="publication-text text">В Беларуси Президентом подписан Декрет, который предоставит широкие возможности для использования технологии блокчейн и различные льготы для IT компаний (Декрет о ПВТ 2.0)</p>
+									</a>
+								</div>
+								<div class="publication-block">
+									<a href="" class="publication-link">
+										<div class="eye-block">
+											<div class="eye-text">0</div>
+											<img src="img/eye.svg" alt="" class="eye-img">
+										</div>
+										<p class="publication-date">12.07.2018</p>
+										<h6 class="publication-title text text_bold">Необходимость уведомления налоговых органов РФ о созданных КИК (контролируемых иностранных компаниях) в СНГ и Балтии</h6>
+										<p class="publication-text text">Согласно пункту 7 статьи 25.13 НК РФ, контролируемая иностранная компания освобождается от налогов на свою прибыль в случае, если компания создана исходя из законодательных норм государства, относящегося к Евразийскому экономическому союзу.</p>
+									</a>
+								</div>
+								<div class="publication-block">
+									<a href="" class="publication-link">
+										<div class="eye-block">
+											<div class="eye-text">0</div>
+											<img src="img/eye.svg" alt="" class="eye-img">
+										</div>
+										<p class="publication-date">09.07.2018</p>
+										<h6 class="publication-title text text_bold">Регистрация представительств/филиалов иностранных компаний в России: практика 2017 года.</h6>
+										<p class="publication-text text">Несмотря на высокую государственную пошлину (с 2015 года, размер государственной пошлины по регистрации филиала или представительства составляет 120 000 рублей (для ИФНС № 47) и 15 000 рублей (для ТПП РФ), среди иностранцев создание филиала или представительства считается более безопасным и управляемым инструментом ведения бизнеса в России, чем регистрация ООО.</p>
+									</a>
+								</div>
+								<div class="publication-block">
+									<a href="" class="publication-link">
+										<div class="eye-block">
+											<div class="eye-text">0</div>
+											<img src="img/eye.svg" alt="" class="eye-img">
+										</div>
+										<p class="publication-date">11.06.2018</p>
+										<h6 class="publication-title text text_bold">Статья на портале "Zakon.kz": "Как гражданину Казахстана оформить сделку купли-продажи доли в российском ООО: делимся опытом"</h6>
+										<p class="publication-text text">Вслед за возникновением Таможенного Cоюза и Единого экономического пространства, для многих казахстанских бизнесменов естественным развитием их бизнес-стратегии стала регистрация компании в России. Однако создать юридическую оболочку в России – это лишь полдела.</p>
+									</a>
+								</div>
+								<div class="publication-block">
+									<a href="" class="publication-link">
+										<div class="eye-block">
+											<div class="eye-text">0</div>
+											<img src="img/eye.svg" alt="" class="eye-img">
+										</div>
+										<p class="publication-date">11.06.2018</p>
+										<h6 class="publication-title text text_bold">Статья на портале "Zakon.kz": "Как гражданину Казахстана оформить сделку купли-продажи доли в российском ООО: делимся опытом"</h6>
+										<p class="publication-text text">Вслед за возникновением Таможенного Cоюза и Единого экономического пространства, для многих казахстанских бизнесменов естественным развитием их бизнес-стратегии стала регистрация компании в России. Однако создать юридическую оболочку в России – это лишь полдела.</p>
+									</a>
+								</div>
 							</div>
-							<div class="publication-block">
-								<a href="" class="publication-link">
-									<p class="publication-date">12.07.2018</p>
-									<h6 class="publication-title text text_bold">Необходимость уведомления налоговых органов РФ о созданных КИК (контролируемых иностранных компаниях) в СНГ и Балтии</h6>
-									<p class="publication-text text">Согласно пункту 7 статьи 25.13 НК РФ, контролируемая иностранная компания освобождается от налогов на свою прибыль в случае, если компания создана исходя из законодательных норм государства, относящегося к Евразийскому экономическому союзу.</p>
-								</a>
-							</div>
-							<div class="publication-block">
-								<a href="" class="publication-link">
-									<p class="publication-date">09.07.2018</p>
-									<h6 class="publication-title text text_bold">Регистрация представительств/филиалов иностранных компаний в России: практика 2017 года.</h6>
-									<p class="publication-text text">Несмотря на высокую государственную пошлину (с 2015 года, размер государственной пошлины по регистрации филиала или представительства составляет 120 000 рублей (для ИФНС № 47) и 15 000 рублей (для ТПП РФ), среди иностранцев создание филиала или представительства считается более безопасным и управляемым инструментом ведения бизнеса в России, чем регистрация ООО.</p>
-								</a>
-							</div>
-							<div class="publication-block">
-								<a href="" class="publication-link">
-									<p class="publication-date">11.06.2018</p>
-									<h6 class="publication-title text text_bold">Статья на портале "Zakon.kz": "Как гражданину Казахстана оформить сделку купли-продажи доли в российском ООО: делимся опытом"</h6>
-									<p class="publication-text text">Вслед за возникновением Таможенного Cоюза и Единого экономического пространства, для многих казахстанских бизнесменов естественным развитием их бизнес-стратегии стала регистрация компании в России. Однако создать юридическую оболочку в России – это лишь полдела.</p>
-								</a>
-							</div>
-							<div class="publication-block">
-								<a href="" class="publication-link">
-									<p class="publication-date">11.06.2018</p>
-									<h6 class="publication-title text text_bold">Статья на портале "Zakon.kz": "Как гражданину Казахстана оформить сделку купли-продажи доли в российском ООО: делимся опытом"</h6>
-									<p class="publication-text text">Вслед за возникновением Таможенного Cоюза и Единого экономического пространства, для многих казахстанских бизнесменов естественным развитием их бизнес-стратегии стала регистрация компании в России. Однако создать юридическую оболочку в России – это лишь полдела.</p>
-								</a>
-							</div>
+							<a href="" class="expert-link publication-more">больше публикаций</a>
 						</div>
-						<a href="" class="expert-link publication-more">больше публикаций</a>
 					</div>
 					<button class="btn open-form-btn contact-form-btn show1160">Отправить нам сообщение</button>
 				</div>
@@ -318,23 +373,25 @@
 								<li class="company-item">Отличное знание законодательства и практики</li>
 								<li class="company-item">Высокое качество услуг и автоматизации внутренних процессов</li>
 							</ul>
-							<a href="" download class="about-link about-link_company">Скачать брошюру</a>
+							<a href="img/requisites.pdf" download class="about-link about-link_company">Скачать брошюру</a>
 						</div>
 					</div>
-					<div class="contact-block contact-block_marg">
-						<form class="contact-form">
-							<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
-							<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
-							<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
-							<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
-							<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
-							<label class="contact-form-label">
-								<input type="checkbox" required class="contact-form-check">
-								Даю свое согласие на обработку персональных данных.
-							</label>
-							<p class="contact-form-description">*Все поля обязательны для заполнения</p>
-							<button type="submit" class="contact-form-btn">Отправить</button>
-						</form>
+					<div class="contact-form-trigger">
+						<div class="contact-block contact-block_marg contact-form-fixed">
+							<form class="contact-form">
+								<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
+								<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
+								<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
+								<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
+								<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
+								<label class="contact-form-label">
+									<input type="checkbox" required class="contact-form-check">
+									Даю свое согласие на обработку персональных данных.
+								</label>
+								<p class="contact-form-description">*Все поля обязательны для заполнения</p>
+								<button type="submit" class="contact-form-btn">Отправить</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -355,6 +412,9 @@
 				<p class="contact-form-description">*Все поля обязательны для заполнения</p>
 				<button type="submit" class="contact-form-btn">Отправить</button>
 			</form>
+			<div class="mail-popup-close">
+				<img src="img/close.svg" alt="" class="mail-popup-img">
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
@@ -426,7 +486,7 @@
         </div>
     </div>
 </footer>
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 

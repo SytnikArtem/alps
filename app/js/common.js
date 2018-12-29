@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
 
     $(".mobile_header .main_menu").click(function () {
-
+        $(this).toggleClass("active");
         $(".mobile_menu").slideToggle(300);
         $("body").toggleClass("menu_open");
     });
@@ -40,7 +40,7 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: false,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 1160,
@@ -62,7 +62,7 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: false,
-        infinite: false,
+        infinite: true,
         adaptiveHeight: false,
         responsive: [
             {
@@ -82,8 +82,15 @@ $(document).ready(function() {
         ]
     });
     $('.contact-item').click(function(){
-        $(this).siblings().find('.contact-drop').slideUp();
-       $(this).find('.contact-drop').slideToggle();
+
+       $(this).toggleClass('active');
+        if(!$(this).hasClass('active')) {
+            $(this).find('.contact-drop').slideUp();
+        }
+        else {
+            $(this).parent().parent().find('.contact-drop').slideUp();
+            $(this).find('.contact-drop').slideToggle();
+        }
     });
     $('.contact-drop').click(function(event){
        event.stopPropagation();
@@ -194,12 +201,38 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $(this).parent().siblings().find('.question-slide').slideUp()
         $(this).parent().find('.question-slide').slideToggle();
-    })
+    });
+    setTimeout(function () {
+        if($('.contact-form-trigger').length > 0) {
+            var heightDuration = $('.contact-right').height() - $('.contact-form-trigger').position().top - $('.contact-form-trigger').height();
+            var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-75"}});
+            var scene1 = new ScrollMagic.Scene({
+                triggerElement: ".contact-form-trigger", // point of execution
+                duration: heightDuration, // pin element for the window height - 1
+                reverse: true // allows the effect to trigger when scrolled in the reverse direction
+            })
+                .setPin(".contact-form-fixed") // the element we want to pin
+                .addTo(controller);
+        }
+    }, 500);
+
+    $('.mail-popup-close').click(function () {
+        $('.mail-popup').removeClass('active');
+    });
+
 });
+
 $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
         $('.main_header').addClass('active');
     } else {
         $('.main_header').removeClass('active');
     }
+    // if ($(this).scrollTop() > positionForm) {
+    //     $('.contact-form-fixed').addClass('fixed-form')
+    // }
+    // else if ($(this).scrollTop() < positionForm) {
+    //     console.log('sss');
+    //     $('.contact-form-fixed').removeClass('fixed-form')
+    // }
 });

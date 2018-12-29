@@ -18,60 +18,93 @@
 
 	<!-- header.html -->
 <header class="main_header">
-	<div class="main_menu header_block" style="opacity: 1;">
-		<a href="#"><i class="main_menu__icon">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</i>
-			Меню</a>
-	</div>
+	<div class="main-header-left">
+		<div class="main_menu header_block" style="opacity: 1;">
+			<a href="#"><i class="main_menu__icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</i>
+				Меню</a>
+		</div>
 
-	<div class="header_contacts header_block" style="opacity: 1;">
+		<div class="header_contacts header_block" style="opacity: 1;">
 
-		<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
+			<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
 
-		<div class="header_contacts__dropdown dropdown_menu hidden">
-			<a href="#">Москва +7 (499) 921-02-22</a>
-			<a href="#">Астана +7 (7172) 727 783</a>
+			<div class="header_contacts__dropdown dropdown_menu hidden">
+				<a href="#">Москва +7 (499) 921-02-22</a>
+				<a href="#">Астана +7 (7172) 727 783</a>
+			</div>
+		</div>
+		<div class="side_menu">
+			<nav>
+				<a href="">О компании </a>
+				<a href="">Услуги</a>
+				<a href="">Страны</a>
+				<a href="">Публикации</a>
+				<a href="">Мероприятия</a>
+				<a href="">Контакты</a>
+			</nav>
+			<div class="slide-social">
+				<a href="" class="slide-social-mail">info@alpschase.com</a>
+				<div class="slide-icons">
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="" class="social-link">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="side_menu">
-		<nav>
-			<a href="">О компании </a>
-			<a href="">Услуги</a>
-			<a href="">Страны</a>
-			<a href="">Публикации</a>
-			<a href="">Мероприятия</a>
-			<a href="">Контакты</a>
-		</nav>
-	</div>
+
 	<div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
-	<div class="cabinet header_block_right">
-		<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
-	</div>
-	<div class="lang header_block_right">
-		<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
-		<div class="lang__list dropdown_menu">
-			<a href=""><i></i><span>RU</span></a>
-			<a href=""><i></i><span>EN</span></a>
-			<a href=""><i></i><span>FR</span></a>
-			<a href=""><i></i><span>DE</span></a>
-			<a href=""><i></i><span>IT</span></a>
-			<a href=""><i></i><span>ES</span></a>
+	<div class="main-header-right">
+		<div class="cabinet header_block_right">
+			<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
+		</div>
+		<div class="lang header_block_right">
+			<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
+			<div class="lang__list dropdown_menu">
+				<a href=""><i></i><span>RU</span></a>
+				<a href=""><i></i><span>EN</span></a>
+				<a href=""><i></i><span>FR</span></a>
+				<a href=""><i></i><span>DE</span></a>
+				<a href=""><i></i><span>IT</span></a>
+				<a href=""><i></i><span>ES</span></a>
 
+			</div>
+		</div>
+		<div class="header_search header_block_right">
+			<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
+			<div class="header_search__input">
+				<form action="" method="get">
+					<input type="text" name="q" value="">
+					<button><i class="far fa-search"></i></button>
+				</form>
+			</div>
 		</div>
 	</div>
-	<div class="header_search header_block_right">
-		<a class="header_search__label" href="#"><i class="far fa-search"></i>ПОИСК</a>
-		<div class="header_search__input">
-			<form action="" method="get">
-				<input type="text" name="q" value="">
-				<button><i class="far fa-search"></i></button>
-			</form>
-		</div>
-	</div>
+
 </header>
 	<div class="mobile_header">
     <div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
@@ -246,67 +279,67 @@
 						<p class="countries-text text">Страны, в которых компания АЛПС энд ЧЕЙС имеет возможность оказывать консультационные услуги:</p>
 						<div class="countries-list">
 							<div class="countries-item">
-								<img src="img/kz.jpg" alt="" class="contact-item-img">
+								<img src="img/kz.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Казахстан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/uz.jpg" alt="" class="contact-item-img">
-								<p class="contact-item-text">Узбекестан</p>
+								<img src="img/uz.svg" alt="" class="contact-item-img">
+								<p class="contact-item-text">Узбекистан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/am.jpg" alt="" class="contact-item-img">
+								<img src="img/am.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Армения</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/rf.jpg" alt="" class="contact-item-img">
+								<img src="img/ru.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Россия</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/kg.jpg" alt="" class="contact-item-img">
+								<img src="img/kg.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Кыргызстан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/ge.jpg" alt="" class="contact-item-img">
+								<img src="img/ge.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Грузия</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/br.jpg" alt="" class="contact-item-img">
+								<img src="img/by.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Беларусь</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/tj.jpg" alt="" class="contact-item-img">
+								<img src="img/tj.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Таджикистан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/lt.jpg" alt="" class="contact-item-img">
+								<img src="img/lt.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Литва</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/ua.jpg" alt="" class="contact-item-img">
+								<img src="img/ua.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Украина</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/tm.jpg" alt="" class="contact-item-img">
+								<img src="img/tm.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Туркменистан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/lv.jpg" alt="" class="contact-item-img">
+								<img src="img/lv.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Латвия</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/md.jpg" alt="" class="contact-item-img">
+								<img src="img/md.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Молдова</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/az.jpg" alt="" class="contact-item-img">
+								<img src="img/az.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Азербайджан</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/ee.jpg" alt="" class="contact-item-img">
+								<img src="img/ee.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Эстония</p>
 							</div>
 							<div class="countries-item">
-								<img src="img/mn.jpg" alt="" class="contact-item-img">
+								<img src="img/mn.svg" alt="" class="contact-item-img">
 								<p class="contact-item-text">Монголия</p>
 							</div>
 						</div>
@@ -348,20 +381,20 @@
 						</div>
 					</div>
 					<div class="contact-block contact-block_marg">
-						<form class="contact-form">
-							<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
-							<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
-							<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
-							<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
-							<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
-							<label class="contact-form-label">
-								<input type="checkbox" required class="contact-form-check">
-								Даю свое согласие на обработку персональных данных.
-							</label>
-							<p class="contact-form-description">*Все поля обязательны для заполнения</p>
-							<button type="submit" class="contact-form-btn">Отправить</button>
-						</form>
-					</div>
+							<form class="contact-form">
+								<h6 class="contact-form-title">Отправьте нам Сообщение</h6>
+								<input type="text" class="contact-form-input" required placeholder="Ваше имя:">
+								<input type="phone" class="contact-form-input" required placeholder="Ваш телефон:">
+								<input type="email" class="contact-form-input" required placeholder="Ваш e-mail:">
+								<textarea class="contact-form-textarea" required placeholder="Сообщение:"></textarea>
+								<label class="contact-form-label">
+									<input type="checkbox" required class="contact-form-check">
+									Даю свое согласие на обработку персональных данных.
+								</label>
+								<p class="contact-form-description">*Все поля обязательны для заполнения</p>
+								<button type="submit" class="contact-form-btn">Отправить</button>
+							</form>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -386,6 +419,9 @@
 				<p class="contact-form-description">*Все поля обязательны для заполнения</p>
 				<button type="submit" class="contact-form-btn">Отправить</button>
 			</form>
+			<div class="mail-popup-close">
+				<img src="img/close.svg" alt="" class="mail-popup-img">
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
@@ -457,7 +493,7 @@
         </div>
     </div>
 </footer>
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 
