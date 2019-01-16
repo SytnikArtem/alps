@@ -64,7 +64,7 @@ body
 	min-width: 320px
 	line-height: normal
 	overflow-x: hidden
-	padding-top: 75px
+	padding-top: 11vh
 
 img
 	display: block
@@ -144,6 +144,21 @@ img
 	justify-content: flex-start
 	background: url(../img/title.png) no-repeat center
 	background-size: cover
+	&_article
+		background: url(../img/title2.jpg) no-repeat center
+		background-size: cover
+	&_contacts
+		background: url(../img/title3.jpg) no-repeat center
+		background-size: cover
+	&_countries
+		background: url(../img/title4.jpg) no-repeat center
+		background-size: cover
+	&_publication
+		background: url(../img/title5.jpg) no-repeat center
+		background-size: cover
+	&_item
+		background: url(../img/title6.jpg) no-repeat center
+		background-size: cover
 	&-title
 		color: #ffffff
 		font-size: 30px
@@ -190,7 +205,8 @@ img
 	color: #222222
 	font-size: 20px
 	letter-spacing: 0.5px
-	line-height: 1.5
+	line-height: 1.2
+	font-family: "Arial Narrow"
 	&_bold
 		font-weight: bold
 	&_italic
@@ -287,6 +303,7 @@ img
 			line-height: 1
 			margin: 0 20px
 			outline: none
+			font-family: "Arial Narrow"
 		&-name
 			margin: 15px 0 5px
 			color: #009287
@@ -359,6 +376,7 @@ img
 		margin: 30px 0 0
 	&-item
 		margin-right: 150px
+		font-family: "Arial Narrow"
 		&:last-child
 			margin-right: 0
 	&-title
@@ -440,7 +458,7 @@ img
 				color: #ffffff
 .social
 	&-list
-		margin: 40px 0 0
+		margin: 25px 0 0
 		display: flex
 		align-items: center
 		justify-content: flex-start
@@ -530,7 +548,7 @@ img
 				color: #82807c
 		&_reg
 			max-width: 340px
-			margin: 15px auto 0
+			margin: 25px auto 0
 		&-title
 			color: #222222
 			font-size: 24px
@@ -551,7 +569,7 @@ img
 		&-input
 			border: 1px solid rgba(53, 76, 88, 0.29)
 			width: 100%
-			margin-bottom: 20px
+			margin-bottom: 30px
 			height: 50px
 			line-height: 50px
 			font-size: 18px
@@ -580,7 +598,7 @@ img
 		&-description
 			color: rgba(72, 68, 62, 0.75)
 			font-size: 18px
-			margin: 0 0 0 20px
+			//margin: 0 0 0 20px
 		&-btn
 			color: #ffffff
 			font-size: 18px
@@ -594,7 +612,7 @@ img
 			outline: none
 			border: none
 			cursor: pointer
-			margin: 25px 0 20px
+			margin: 10px 0 20px
 			transition:  background-color .5s ease
 			&_white
 				background: #ffffff
@@ -713,7 +731,7 @@ img
 			height: 100%
 .article
 	&-title
-		color: #3ab6de
+		color: #11c5ff
 		font-size: 24px
 		text-transform: uppercase
 		letter-spacing: 0.6px
@@ -832,7 +850,7 @@ img
 		text-transform: uppercase
 .item
 	&-title
-		color: #3fc0ea
+		color: #11c5ff
 		margin-bottom: 50px
 		padding-right: 50px
 	&-subtitle
@@ -980,21 +998,23 @@ img
 	width: 100%
 	max-width: 860px
 	border: 1px solid rgba(63, 192, 234, 0.5)
-	padding: 40px 50px
+	padding: 45px 50px 30px
 	margin: 30px auto
 	&-title
 		color: #222222
 		font-size: 24px
 		text-align: center
+		letter-spacing: 0.55px
 	&-description
 		color: #222222
 		font-size: 18px
 		text-align: center
 		margin: 10px 0 0
+		letter-spacing: 0.9px
 	&-lang
 		display: flex
 		justify-content: center
-		margin-top: 20px
+		margin-top: 30px
 		.lang
 			float: none
 			margin-left: 15px
@@ -1097,17 +1117,93 @@ img
 	height: 100vh
 .b-sidebar, .b-loader
 	display: none!important
-.side_menu
+.side-menu-container
 	display: flex!important
 	flex-direction: column
 	align-items: flex-start
 	justify-content: space-between
+	height: 100%
+	padding-left: 6vh
 .slide-social
 	padding-bottom: 30px
 .slide-social-mail
-	font-size: 20px!important
+	font-size: 1.85vh!important
 .slide-icons .social-link
-	font-size: 18px!important
+	font-size: 1.67vh!important
 .contact-item-img
 	width: 37px
-@import "media" // Всегда в конце
+.footer-ancor
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 1px solid #3fc0ea
+	text-decoration: none
+	color: #3fc0ea
+	display: flex
+	align-items: center
+	justify-content: center
+	position: fixed
+	bottom: 40px
+	right: 40px
+	pointer-events: none
+	opacity: 0
+	transition: opacity .5s ease
+	background: #ffffff
+	&.active
+		pointer-events: auto
+		opacity: 1
+	&:hover
+		text-decoration: none
+		color: #3fc0ea
+	.far
+		font-size: 20px
+		text-decoration: none
+		transform: rotate(180deg)
+.logo_fixed
+	position: absolute
+	left: 50%
+	top: 35px
+	transform: translateX(-50%)
+.contact-form-link
+	display: inline-block
+	margin-bottom: 10px
+.slide-lang
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 15px
+.slide-lang-link
+	font-size: 1.45vh !important
+	margin-right: 10px
+	&.active
+		text-decoration: underline
+.footer_main__manu, .footer_main__manu nav
+	height: 100%
+.main_menu__icon
+	background: url(../img/menu.svg) no-repeat center
+	background-size: contain
+.main_menu.active .main_menu__icon
+	background: url(../img/cross.svg) no-repeat center
+	background-size: contain
+.sign-in
+	width: 14px
+	margin-left: 10px
+.b-main header.main_header .sign-in
+	width: 1.8vh
+	margin-left: 10px
+.cabinet .sign-in
+	width: 18px
+.b-main header.main_header .sign-in path
+	fill: #ffffff
+.video-popup-container
+	position: relative
+.video-popup-close
+	width: 20px
+	height: 20px
+	background: url(../img/close.svg) no-repeat center
+	background-size: 20px 20px
+	cursor: pointer
+	position: absolute
+	top: 5px
+	right: 5px
+@import "media" // Всегда вконце

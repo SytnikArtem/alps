@@ -20,12 +20,10 @@
 <header class="main_header">
 	<div class="main-header-left">
 		<div class="main_menu header_block" style="opacity: 1;">
-			<a href="#"><i class="main_menu__icon">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</i>
+			<a href="#">
+				<i class="main_menu__icon">
+
+				</i>
 				Меню</a>
 		</div>
 
@@ -34,44 +32,54 @@
 			<a href="#" class="header_contacts__current dropdown_link">Москва +7 (499) 921-02-22 <i class="far fa-angle-down"></i></a>
 
 			<div class="header_contacts__dropdown dropdown_menu hidden">
-				<a href="#">Москва +7 (499) 921-02-22</a>
-				<a href="#">Астана +7 (7172) 727 783</a>
+				<a href="tel:+74999210222">Москва +7 (499) 921-02-22</a>
+				<a href="tel:+77172727783">Астана +7 (7172) 727-783</a>
 			</div>
 		</div>
 		<div class="side_menu">
-			<nav>
-				<a href="">О компании </a>
-				<a href="">Услуги</a>
-				<a href="">Страны</a>
-				<a href="">Публикации</a>
-				<a href="">Мероприятия</a>
-				<a href="">Контакты</a>
-			</nav>
-			<div class="slide-social">
-				<a href="" class="slide-social-mail">info@alpschase.com</a>
-				<div class="slide-icons">
-					<ul class="social-list">
-						<li class="social-item">
-							<a href="" class="social-link">
-								<i class="fab fa-facebook-square"></i>
-							</a>
-						</li>
-						<li class="social-item">
-							<a href="" class="social-link">
-								<i class="fab fa-instagram"></i>
-							</a>
-						</li>
-						<li class="social-item">
-							<a href="" class="social-link">
-								<i class="fab fa-youtube"></i>
-							</a>
-						</li>
-						<li class="social-item">
-							<a href="" class="social-link">
-								<i class="fab fa-linkedin-in"></i>
-							</a>
-						</li>
-					</ul>
+			<div class="side-menu-container">
+				<nav>
+					<a href="">О компании </a>
+					<a href="">Услуги</a>
+					<a href="">Страны</a>
+					<a href="">Публикации</a>
+					<a href="">Мероприятия</a>
+					<a href="">Контакты</a>
+				</nav>
+				<div class="slide-social">
+					<div class="slide-lang">
+						<a href="" class="slide-lang-link active">RU</a>
+						<a href="" class="slide-lang-link">EN</a>
+						<a href="" class="slide-lang-link">FR</a>
+						<a href="" class="slide-lang-link">DE</a>
+						<a href="" class="slide-lang-link">IT</a>
+						<a href="" class="slide-lang-link">ES</a>
+					</div>
+					<a href="mailto:info@alpschase.com" class="slide-social-mail">info@alpschase.com</a>
+					<div class="slide-icons">
+						<ul class="social-list">
+							<li class="social-item">
+								<a href="" class="social-link">
+									<i class="fab fa-facebook-square"></i>
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="" class="social-link">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="" class="social-link">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="" class="social-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -80,17 +88,22 @@
 	<div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
 	<div class="main-header-right">
 		<div class="cabinet header_block_right">
-			<a href="#">ВХОД В КАБИНЕТ<i class="far fa-sign-in"></i></a>
+			<a href="#">ВХОД В КАБИНЕТ
+				<svg class="sign-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 11 L 3 13 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 5 C 21 3.9069372 20.093063 3 19 3 L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 13 L 11.585938 13 L 9.2929688 15.292969 L 10.707031 16.707031 L 15.414062 12 L 10.707031 7.2929688 L 9.2929688 8.7070312 L 11.585938 11 L 5 11 L 5 5 z" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible"></path>
+				</svg>
+				<!--<i class="far fa-sign-in"></i>-->
+			</a>
 		</div>
 		<div class="lang header_block_right">
 			<a href="#" class="lang__current dropdown_link">RU <i class="far fa-angle-down"></i></a>
 			<div class="lang__list dropdown_menu">
 				<a href=""><i></i><span>RU</span></a>
 				<a href=""><i></i><span>EN</span></a>
-				<a href=""><i></i><span>FR</span></a>
-				<a href=""><i></i><span>DE</span></a>
-				<a href=""><i></i><span>IT</span></a>
-				<a href=""><i></i><span>ES</span></a>
+				<!--<a href=""><i></i><span>FR</span></a>-->
+				<!--<a href=""><i></i><span>DE</span></a>-->
+				<!--<a href=""><i></i><span>IT</span></a>-->
+				<!--<a href=""><i></i><span>ES</span></a>-->
 
 			</div>
 		</div>
@@ -110,7 +123,9 @@
     <div class="logo"><a href=""><img src="img/logo.png" alt="AlpsChase"></a></div>
     <div class="mobile_header__wrapper">
         <div class="cabinet">
-            <i class="fa fa-sign-in"></i>
+            <svg class="sign-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 11 L 3 13 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 5 C 21 3.9069372 20.093063 3 19 3 L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 13 L 11.585938 13 L 9.2929688 15.292969 L 10.707031 16.707031 L 15.414062 12 L 10.707031 7.2929688 L 9.2929688 8.7070312 L 11.585938 11 L 5 11 L 5 5 z" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible"></path>
+            </svg>
         </div>
 
         <div class="header_search">
@@ -121,6 +136,17 @@
                     <button><i class="far fa-search"></i></button>
                 </form>
             </div>
+        </div>
+        <div class="header-phone">
+            <a href="#" class="lang__current dropdown_link">
+                <i class="far fa-phone"></i>
+                <i class="far fa-angle-down"></i>
+            </a>
+            <div class="lang__list dropdown_menu">
+                <a href="tel:+74999210222">Москва +7 (499) 921-02-22</a>
+                <a href="tel:+77172727783">Астана +7 (7172) 727-783</a>
+            </div>
+
         </div>
 
         <div class="lang">
@@ -154,7 +180,7 @@
         <a href="">Публикации</a>
         <a href="">Мероприятия</a>
         <a href="">Контакты</a>
-        <a href="">ПОЛНАЯ версия сайта</a>
+        <!--<a href="">ПОЛНАЯ версия сайта</a>-->
     </nav>
 </div>
 	<div class="menu">
@@ -389,6 +415,7 @@
 	</section>
 	<div class="video-popup">
 		<div class="video-popup-container">
+			<div class="video-popup-close"></div>
 			<iframe src="https://www.youtube.com/embed/yI0X4e7bxHU" controls="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
@@ -481,6 +508,9 @@
         </div>
     </div>
 </footer>
+	<a href="" class="footer-ancor">
+		<i class="far fa-angle-down"></i>
+	</a>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>

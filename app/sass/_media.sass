@@ -6,37 +6,41 @@
 @media only screen and (max-width : 1300px)
   .b-main .logo
     width: 180px!important
-  .b-main header.main_header a
-    font-size: 16px!important
-  .b-main header.main_header .side_menu a
-    font-size: 20px!important
+  //.b-main header.main_header a
+  //  font-size: 16px!important
+  //.b-main header.main_header .side_menu a
+  //  font-size: 20px!important
   .slide-social-mail
     font-size: 20px!important
   .slide .letter .slide_h1
     font-size: 180px
-  .b-cube-side-content
-    width: 80rem
+  //.b-cube-side-content
+  //  width: 80rem
   .slide .letter .slide_h2
     font-size: 50px
 @media only screen and (max-width : 1160px)
   .company
     display: none
-  .contact-flex
-    flex-wrap: wrap
   .contact-left
     width: 100%
+  .contact-right
+    width: 240px
+    flex-shrink: 0
   .menu
     display: none
   .my-container
     padding: 0 40px
   .section
     padding: 40px 0
+  //.contact-block
+  //  border: none
+  //  padding: 0
+  //.contact-form-trigger
+  //  margin-top: -20px
   .contact-block
-    border: none
-    padding: 0
+    padding: 20px
+    margin-top: 0
   .footer
-    display: none
-  .contact-right
     display: none
   .expert-link
     margin-bottom: 0
@@ -69,18 +73,25 @@
   .advantages-item
     background-size: 30px
     padding-top: 55px
-  .registration
-    border: none
-    margin: 0 auto
   .registration-container
     padding: 0 40px
-  .side_menu
-    padding-left: 40px!important
-  .side_menu a
-    font-size: 30px!important
+  //.side_menu
+  //  padding-left: 40px!important
+  //.side_menu a
+  //  font-size: 30px!important
 @media only screen and (max-width : 910px)
   body
     padding: 0
+  .registration
+    border: none
+    margin: 0 auto
+  .footer-ancor
+    right: 10px
+    bottom: 10px
+  .logo_fixed
+    position: static
+    transform: none
+    margin-bottom: 20px!important
   .section
     padding: 30px 0
   .about-right
@@ -99,6 +110,19 @@
     padding: 0 20px
   .text
     font-size: 18px
+  .contact-right
+    display: none
+  .contact-block
+    padding: 0
+    border: none
+  .article-table-right, .article-table-left
+    padding: 12px 15px
+    font-size: 16px
+  .contact-right
+    width: 100%
+    margin: 20px 0 0
+  .contact-flex
+    flex-wrap: wrap
   .article-title
     font-size: 20px
     max-width: 100%
@@ -200,3 +224,11 @@
     line-height: 20px
   .services-left
     margin-right: 10px
+  .header_search__input
+    width: 200px!important
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+  .b-main header.main_header a
+    line-height: normal!important
+  .main_menu__icon, .dropdown_link i, .b-main header.main_header .sign-in
+    margin-top: -3px!important
+

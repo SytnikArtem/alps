@@ -54,6 +54,10 @@ gulp.task('libs-js', function(){
     'app/libs/CubeGallery.js',
     'app/libs/Modernizr.custom.js',
     'app/libs/slick-carousel/slick/slick.min.js',
+    'app/libs/scrollmagic/ScrollMagic.min.js',
+    'app/libs/scrollmagic/addIndicators.min.js',
+    // 'app/libs/scrollmagic/animation.gsap.js',
+    'app/libs/scrollmagic/TweenMax.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

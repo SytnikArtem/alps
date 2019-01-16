@@ -655,7 +655,7 @@ var App = {
                 distance: 0,
                 angle: 0
             },
-            height: 11,
+            height: 8,
             perspective: 21,
             depth: 3.5,
             rotateDuration: 1e3,

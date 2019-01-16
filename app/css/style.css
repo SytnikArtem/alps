@@ -176,8 +176,7 @@ BODY {
     left: 0;
     right: 0;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll
+    overflow: hidden;
 }
 
 .b-main._freeze .b-page {
@@ -596,7 +595,7 @@ TEXTAREA {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-position: 50% 50%;
+    /*background-position: 50% 50%;*/
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0
@@ -639,12 +638,16 @@ TEXTAREA {
 }
 .b-cube-side-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25rem 0 0 -30rem;
-    width: 90rem;
-    height: 60rem;
-    padding-top: 1rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*margin: -25rem 0 0 -30rem;*/
+    /*width: 90rem;*/
+    /*height: 60rem;*/
+    /*padding-top: 1rem;*/
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-user-select: none;
@@ -1478,7 +1481,7 @@ TEXTAREA {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 35rem;
+    width: 26rem;
     height: 13rem;
     margin-top: -6.5rem;
     -webkit-user-select: none;
@@ -1506,8 +1509,8 @@ TEXTAREA {
 .b-rotator._active:after {
     content: '';
     position: absolute;
-    top: 12.5rem;
-    left: 4.4rem;
+    top: 9rem;
+    left: 3.7rem;
     width: 1.4rem;
     height: 1.4rem;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNOC43NTEgMy40OTVoLTUuODMybDIuMDg0LTIuMDdjLjMyNy0uMzI3LjMyNy0uODUzIDAtMS4xNzktLjMzLS4zMjgtLjg2My0uMzI4LTEuMTkyIDBsLTMuNTY2IDMuNTQyYy0uMzI2LjMyNy0uMzI2Ljg1NiAwIDEuMTgybDMuNTY3IDMuNTQzYy4zMjkuMzI1Ljg2Mi4zMjcgMS4xOTIgMCAuMzI2LS4zMjcuMzI2LS44NTUgMC0xLjE4MmwtMi4xMDItMi4wODVoNS44NDljMS45MzIgMCAzLjQ5OSAxLjU2OCAzLjQ5OSAzLjUwMSAwIDEuOTMzLTEuNTY3IDMuNTAyLTMuNDk5IDMuNTAyLS40ODMgMC0uODc0LjM5Mi0uODc0Ljg3NXMuMzkxLjg3Ni44NzQuODc2YzIuODk5IDAgNS4yNDktMi4zNTMgNS4yNDktNS4yNTNzLTIuMzUtNS4yNTItNS4yNDktNS4yNTJ6Ii8+PC9zdmc+);
@@ -1527,9 +1530,9 @@ TEXTAREA {
 }
 
 .b-rotator._closed {
-    -webkit-transform: rotate(45deg) translate(31.5rem, -6.5rem);
-    -ms-transform: rotate(45deg) translate(31.5rem, -6.5rem);
-    transform: rotate(45deg) translate(31.5rem, -6.5rem)
+    -webkit-transform: rotate(45deg) translate(17.5rem, -11.5rem);
+    -ms-transform: rotate(45deg) translate(17.5rem, -.b-rotator-arr:after11.5rem);
+    transform: rotate(45deg) translate(17.5rem, -11.5rem)
 }
 
 .b-rotator._draggable {
@@ -1544,8 +1547,8 @@ TEXTAREA {
     position: absolute;
     right: -3rem;
     top: 50%;
-    width: 34rem;
-    height: 11rem;
+    width: 26rem;
+    height: 8rem;
     margin-top: -3.5rem
 }
 
@@ -1599,9 +1602,9 @@ TEXTAREA {
     display: block;
     /*width: 14rem;*/
     height: 3rem;
-    padding-left: 30px;
+    padding-left: 20px;
     /*padding: 2rem 0;*/
-    font-size: 3rem;
+    font-size: 18px;
     line-height: 3rem;
     /*font-weight: 600;*/
     text-transform: uppercase;
@@ -1663,7 +1666,7 @@ TEXTAREA {
     content: '';
     position: absolute;
     top: 1.2rem;
-    left: 15.5rem;
+    left: 12.5rem;
     width: 1rem;
     height: .6rem;
     background-repeat: no-repeat;

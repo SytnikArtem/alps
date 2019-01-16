@@ -25,12 +25,12 @@ $(document).ready(function() {
         return false;
     });
 
-    $(".main_header .main_menu").click(function () {
+    $(".main_header .main_menu a").click(function (e) {
+        e.preventDefault();
         $(".side_menu").toggleClass("open");
-        $(this).toggleClass("active");
+        $(this).parent().toggleClass("active");
         $("body").toggleClass("menu_open");
     });
-
     $(".mobile_header .main_menu").click(function () {
         $(this).toggleClass("active");
         $(".mobile_menu").slideToggle(300);
@@ -193,7 +193,6 @@ $(document).ready(function() {
     });
     $('.item-other-more').click(function(e){
         e.preventDefault();
-        console.log('aa')
         changeHeight(height2, $(this));
     });
     $('.question-btn').click(function () {
@@ -202,23 +201,62 @@ $(document).ready(function() {
         $(this).parent().siblings().find('.question-slide').slideUp()
         $(this).parent().find('.question-slide').slideToggle();
     });
-    setTimeout(function () {
-        if($('.contact-form-trigger').length > 0) {
-            var heightDuration = $('.contact-right').height() - $('.contact-form-trigger').position().top - $('.contact-form-trigger').height();
-            var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-75"}});
-            var scene1 = new ScrollMagic.Scene({
-                triggerElement: ".contact-form-trigger", // point of execution
-                duration: heightDuration, // pin element for the window height - 1
-                reverse: true // allows the effect to trigger when scrolled in the reverse direction
-            })
-                .setPin(".contact-form-fixed") // the element we want to pin
-                .addTo(controller);
-        }
-    }, 500);
+    if ($(window).width() > 1000) {
+        setTimeout(function () {
+            if($('.contact-form-trigger').length > 0) {
+                var heightDuration = $('.contact-right').height() - $('.contact-form-trigger').position().top - $('.contact-form-trigger').height();
+                var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-105"}});
+                var scene1 = new ScrollMagic.Scene({
+                    triggerElement: ".contact-form-trigger", // point of execution
+                    duration: heightDuration, // pin element for the window height - 1
+                    reverse: true // allows the effect to trigger when scrolled in the reverse direction
+                })
+                    .setPin(".contact-form-fixed") // the element we want to pin
+                    .addTo(controller);
+            }
+        }, 500);
+    }
+
 
     $('.mail-popup-close').click(function () {
         $('.mail-popup').removeClass('active');
     });
+    $(document).mouseup(function (e) {
+        if(!e.target.parentElement.classList.contains('active')) {
+            var container2 = $(".header_search__input");
+            var container3 = $(".lang__list");
+            var container4 = $(".header_contacts__dropdown");
+            if (container2.parent().has(e.target).length === 0 || container3.parent().has(e.target).length === 0 || container4.parent().has(e.target).length === 0){
+                container2.slideUp();
+                container3.slideUp();
+                container4.slideUp();
+            }
+        }
+    });
+    if($(window).width() > 910) {
+        $(document).mouseup(function (e) {
+            if(!e.target.parentElement.classList.contains('active')) {
+                var container2 = $(".side-menu-container");
+                if (container2.parent().has(e.target).length === 0){
+                    $('.side_menu').removeClass('open');
+                    $('.main_menu').removeClass('active');
+                    $("body").removeClass("menu_open");
+                }
+            }
+
+        });
+    }
+    $('.footer-ancor').click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0
+    }, 800);
+        return false;
+    });
+    $('.video-popup-close').click(function(){
+        $('.video-popup').removeClass('active');
+        bodyUnfreezeScroll();
+    })
 
 });
 
@@ -228,11 +266,9 @@ $(window).scroll(function () {
     } else {
         $('.main_header').removeClass('active');
     }
-    // if ($(this).scrollTop() > positionForm) {
-    //     $('.contact-form-fixed').addClass('fixed-form')
-    // }
-    // else if ($(this).scrollTop() < positionForm) {
-    //     console.log('sss');
-    //     $('.contact-form-fixed').removeClass('fixed-form')
-    // }
+    if ($(this).scrollTop() > 100) {
+        $('.footer-ancor').addClass('active');
+    } else {
+        $('.footer-ancor').removeClass('active');
+    }
 });
