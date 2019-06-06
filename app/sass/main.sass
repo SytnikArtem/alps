@@ -203,7 +203,7 @@ img
 		background: rgba(241, 242, 246, 0.7)
 .text
 	color: #222222
-	font-size: 20px
+	font-size: 15px
 	letter-spacing: 0.5px
 	line-height: 1.2
 	font-family: "Arial Narrow"
@@ -1179,20 +1179,26 @@ img
 		text-decoration: underline
 .footer_main__manu, .footer_main__manu nav
 	height: 100%
-.main_menu__icon
+.b-main .main_menu__icon
 	background: url(../img/menu.svg) no-repeat center
 	background-size: contain
-.main_menu.active .main_menu__icon
+.main_menu__icon
+	background: url(../img/menu2.svg) no-repeat center
+	background-size: contain
+.b-main .main_menu.active .main_menu__icon
 	background: url(../img/cross.svg) no-repeat center
+	background-size: contain
+.main_menu.active .main_menu__icon
+	background: url(../img/cross2.svg) no-repeat center
 	background-size: contain
 .sign-in
 	width: 14px
-	margin-left: 10px
+	margin-left: 5px
 .b-main header.main_header .sign-in
-	width: 1.8vh
+	width: 2vh
 	margin-left: 10px
 .cabinet .sign-in
-	width: 18px
+	width: 23px
 .b-main header.main_header .sign-in path
 	fill: #ffffff
 .video-popup-container
@@ -1206,4 +1212,5 @@ img
 	position: absolute
 	top: 5px
 	right: 5px
+
 @import "media" // Всегда вконце

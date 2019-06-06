@@ -1,29 +1,37 @@
 $(document).ready(function() {
     // Выпадающие меню
     function openDropdown(elem) {
-        $(".dropdown_menu").not($(elem).siblings(".dropdown_menu")[0]).slideUp(300);
-        $(elem).siblings(".dropdown_menu").slideToggle(300);
-        $(".header_search__input").slideUp(300);
+        // $(".dropdown_menu").not($(elem).siblings(".dropdown_menu")[0]).slideUp(300);
+        $(elem).next().slideToggle(300);
+        $(elem).parent().siblings().find('.dropdown_link').next().slideUp();
+        $(elem).parent().siblings().find('.header_search__label').next().slideUp();
+        $('.mobile_menu').slideUp();
+        $('.main_menu').removeClass('active');
+        // $(elem).siblings(".dropdown_menu").slideToggle(300);
+        // $(".header_search__input").slideUp(300);
     }
     // language=JQuery-CSS
     $(".dropdown_link").click(function () {
         openDropdown(this);
         return false;
     });
-
-    // language=JQuery-CSS
-    $('.main_slider').click(function () {
-        $(".dropdown_menu").slideUp(300);
+    $(".header_search__label").click(function () {
+        openDropdown(this);
         return false;
     });
+    // language=JQuery-CSS
+    // $('.main_slider').click(function () {
+    //     $(".dropdown_menu").slideUp(300);
+    //     return false;
+    // });
 
     // language=JQuery-CSS
-    $(`.header_search__label`).click(function () {
-        $(".dropdown_menu").slideUp(300);
-        $(".header_search__input").slideToggle(300);
-
-        return false;
-    });
+    // $(`.header_search__label`).click(function () {
+    //     $(".dropdown_menu").slideUp(300);
+    //     $(".header_search__input").slideToggle(300);
+    //
+    //     return false;
+    // });
 
     $(".main_header .main_menu a").click(function (e) {
         e.preventDefault();
@@ -35,6 +43,7 @@ $(document).ready(function() {
         $(this).toggleClass("active");
         $(".mobile_menu").slideToggle(300);
         $("body").toggleClass("menu_open");
+        $('.header_search__input, .dropdown_menu').slideUp()
     });
     $('.people-slider').slick({
         slidesToShow: 5,
@@ -205,6 +214,10 @@ $(document).ready(function() {
         setTimeout(function () {
             if($('.contact-form-trigger').length > 0) {
                 var heightDuration = $('.contact-right').height() - $('.contact-form-trigger').position().top - $('.contact-form-trigger').height();
+                if (heightDuration < 1) {
+                    heightDuration = 1;
+                }
+                console.log(heightDuration);
                 var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0", offset: "-105"}});
                 var scene1 = new ScrollMagic.Scene({
                     triggerElement: ".contact-form-trigger", // point of execution
@@ -223,13 +236,21 @@ $(document).ready(function() {
     });
     $(document).mouseup(function (e) {
         if(!e.target.parentElement.classList.contains('active')) {
-            var container2 = $(".header_search__input");
-            var container3 = $(".lang__list");
-            var container4 = $(".header_contacts__dropdown");
-            if (container2.parent().has(e.target).length === 0 || container3.parent().has(e.target).length === 0 || container4.parent().has(e.target).length === 0){
-                container2.slideUp();
-                container3.slideUp();
-                container4.slideUp();
+            var container2 = $(".header_search");
+            var container3 = $(".lang");
+            var container4 = $(".header_contacts__current");
+            var container5 = $(".header-phone");
+            if (container2.parent().has(e.target).length === 0){
+                container2.find('.header_search__input').slideUp();
+            }
+            if (container3.parent().has(e.target).length === 0){
+                container3.find('.lang__list').slideUp();
+            }
+            if (container4.parent().has(e.target).length === 0){
+                container4.parent().find('.dropdown_menu').slideUp();
+            }
+            if (container5.parent().has(e.target).length === 0){
+                container5.find('.lang__list').slideUp();
             }
         }
     });
@@ -241,6 +262,7 @@ $(document).ready(function() {
                     $('.side_menu').removeClass('open');
                     $('.main_menu').removeClass('active');
                     $("body").removeClass("menu_open");
+                    // $('.mobile_menu').slideUp()
                 }
             }
 
